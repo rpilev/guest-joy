@@ -10,7 +10,6 @@ import { OfferComponent } from './ui-elements/offers-list/offer/offer.component'
 import { OfferDetailsComponent } from './pages/offer-details/offer-details.component';
 
 import { AppRoutingModule } from './app-routing.module';
-import { ContactBoxComponent } from './ui-elements/contact-box/contact-box.component';
 import { OfferDetailsBoxComponent } from './ui-elements/offer-details-box/offer-details-box.component';
 
 @NgModule({
@@ -21,7 +20,6 @@ import { OfferDetailsBoxComponent } from './ui-elements/offer-details-box/offer-
     OffersListComponent,
     OfferComponent,
     OfferDetailsComponent,
-    ContactBoxComponent,
     OfferDetailsBoxComponent
   ],
   imports: [

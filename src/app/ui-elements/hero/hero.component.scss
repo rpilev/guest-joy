@@ -1,0 +1,57 @@
+@import '~sass/variables';
+@import '~sass/mixins';
+
+.container-fluid.main-hero {
+  background-image: url(../../../assets/images/banner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  background-position: center; 
+
+  .main-hero-inner {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    max-width: 850px;
+  }
+
+  .narrow-center-text {
+    max-width: 550px;
+    margin: 0 auto;
+    padding-top: 30px;
+  }
+
+  .strong-text {
+    @include strong-small-text();
+  }
+
+  a.small-link {
+    margin: 30px 0;
+    display: block;
+  }
+  a.small-link.accent-default {
+    @include small-link($accent_default);
+  }
+  a.small-link.accent-alternative {
+    @include small-link($accent-alternative);
+  } 
+
+  h1.accent-default{
+    @include big-heading($accent_default);
+  }
+  h1.accent-alternative{
+    @include big-heading($accent_alternative);
+  }
+
+  .button.button-fill.accent-default {
+    @include button($accent_default, 'fill');
+  }
+  .button.button-transparent.accent-default {
+    @include button($accent_default, 'transparent');
+  }
+  .button.button-fill.accent-alternative {
+    @include button($accent_alternative, 'fill');
+  }
+  .button.button-transparent.accent-alternative {
+    @include button($accent_alternative, 'transparent');
+  }
+}

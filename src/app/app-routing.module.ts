@@ -10,6 +10,10 @@ const appRoutes: Routes = [
     component: OffersComponent
   },
   {
+    path: ':theme',
+    component: OffersComponent
+  },
+  {
     path: 'offer-details/:id',
     component: OfferDetailsComponent
   }

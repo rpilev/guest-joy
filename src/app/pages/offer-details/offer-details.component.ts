@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestory } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 
@@ -7,7 +7,7 @@ import { Subscription } from 'rxjs';
   templateUrl: './offer-details.component.html',
   styleUrls: ['./offer-details.component.scss']
 })
-export class OfferDetailsComponent implements OnInit, OnDestory {
+export class OfferDetailsComponent implements OnInit, OnDestroy {
 
   offer_id: number;
   offer_subscription: Subscription;
@@ -22,7 +22,7 @@ export class OfferDetailsComponent implements OnInit, OnDestory {
     );
   }
 
-  ngOnDestory() {
+  ngOnDestroy() {
     this.offer_subscription.unsubscribe();
   }
 

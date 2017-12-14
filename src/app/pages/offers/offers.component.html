@@ -1,3 +1,4 @@
-<app-hero></app-hero>
-<app-offers-list></app-offers-list>
-<app-contact-box></app-contact-box>
+<div [class]="'main-container ' + background_theme">
+  <app-hero [theme]="accent_theme" [content]="hero"></app-hero>
+  <app-offers-list></app-offers-list> 
+</div>

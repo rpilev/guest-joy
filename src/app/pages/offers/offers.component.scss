@@ -1,0 +1,14 @@
+@import '~sass/variables';
+@import '~sass/mixins';
+
+.main-container.background-default {
+  height: 100%;
+  width: 100%;
+  background-color: $background_default;
+}
+
+.main-container.background-alternative {
+  height: 100%;
+  width: 100%;
+  background-color: $background_alternative;
+}

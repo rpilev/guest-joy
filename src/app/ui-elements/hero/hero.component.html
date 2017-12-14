@@ -1,3 +1,29 @@
-<p>
-  hero works!
-</p>
+<div class="container-fluid main-hero">
+  <div class="container-fluid main-hero-inner">
+    <p class="strong-text">
+      Language: 
+      <ng-container *ngFor="let language of hero.languages; let i = index">
+        <ng-container *ngIf="language.selected">
+          <span>{{ language.name }}</span>
+        </ng-container>
+        <ng-container *ngIf="!language.selected">
+          {{ language.name }}
+        </ng-container>
+        <ng-container *ngIf="i < hero.languages.length-1">
+          |
+        </ng-container>
+      </ng-container>
+    </p>
+    <h1 [class]="theme">{{ hero.title }}</h1>
+    <p class="narrow-center-text">{{ hero.content }}</p>
+    <a href="#" [class]="'small-link ' + theme">READ MORE &gt;</a>
+    <button [class]="'btn button button-fill ' + theme">
+      <i class="fa fa-arrow-up" aria-hidden="true"></i>
+      ROOM UPGRADE
+    </button>
+    <button [class]="'btn button button-transparent ' + theme">
+      <i class="fa fa-check" aria-hidden="true"></i>
+      CHECK IN
+    </button>
+  </div>
+</div>

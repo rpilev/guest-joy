@@ -1,0 +1,42 @@
+@mixin strong-small-text() {
+  font-size: 10px;
+  font-weight: bold;
+  span {
+    font-weight: bolder;
+  }
+}
+
+@mixin big-heading($accent) {
+  font-size: 35px;
+  padding-top: 25px;
+  color: $accent;
+}
+
+@mixin small-link($accent) {
+  color: $accent;
+  font-weight: bolder;
+  font-size: 10px;
+}
+
+@mixin button($accent, $fill) {
+  font-size: 9px;
+  font-weight: bold;
+  width: 150px;
+  margin: 10px;
+  border-radius: 20px;
+  padding: 10px;
+
+  @if $fill == 'fill' {
+    color: #fff;
+    background-color: $accent;
+  } @else if $fill == 'transparent' {
+    color: $accent;
+    border-width: 1.5px;
+    border-color: $accent;
+    background-color: transparent !important;
+  }
+  
+  border-color: $accent;
+
+  background-color: $accent;
+}

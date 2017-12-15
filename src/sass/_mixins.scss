@@ -7,12 +7,23 @@
 }
 
 @mixin big-heading($accent) {
+  text-align: center;
   font-size: 35px;
   padding-top: 25px;
   color: $accent;
 }
 
+@mixin medium-heading($accent) {
+  text-align: center;
+  font-size: 30px;
+  padding-top: 55px;
+  color: $accent;
+}
+
 @mixin small-link($accent) {
+  &:hover {
+    text-decoration: none;
+  }
   color: $accent;
   font-weight: bolder;
   font-size: 10px;
@@ -35,7 +46,7 @@
     border-color: $accent;
     background-color: transparent !important;
   }
-  
+
   border-color: $accent;
 
   background-color: $accent;

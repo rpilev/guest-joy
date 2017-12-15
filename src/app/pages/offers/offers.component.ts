@@ -43,9 +43,13 @@ export class OffersComponent implements OnInit, OnDestroy {
           if(params['theme'] == 'alternative') {
             this.accent_theme = 'accent-alternative';
             this.background_theme = 'background-alternative'
+
+            document.body.className = 'background-alternative';
           } else {
             this.accent_theme = 'accent-default';
             this.background_theme = 'background-default'
+
+            document.body.className = 'background-default';
           }
         }
       );

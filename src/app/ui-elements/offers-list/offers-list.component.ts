@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Offer } from './offer/offer.model';
+import { OffersService } from '../../offers.service';
 
 @Component({
   selector: 'app-offers-list',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OffersListComponent implements OnInit {
 
-  constructor() { }
+  offers: Offer[];
+  @Input() theme: string;
+
+  constructor(private offersService: OffersService) { }
 
   ngOnInit() {
+    this.offers = this.offersService.getOffers();
+    console.log(this.offers);
   }
 
 }

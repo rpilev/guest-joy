@@ -1,0 +1,170 @@
+@import '~sass/variables';
+@import '~sass/mixins';
+
+.card.card-offer {
+  vertical-align: top;
+  height: 300px;
+  display: inline-block !important;
+  width: 13rem;
+  margin: 15px;
+  text-align: left;
+  background-color: #E1E1E1;
+  border: none;
+
+  .offer-title {
+    font-weight: bold;
+    font-size: 13px;
+    padding: 9px 17px;
+    margin: 0;
+  }
+
+  hr {
+    border-color: white;
+    margin: 1px;
+  }
+
+  .card-block {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+  }
+
+  .offer-price {
+    font-size: 12px;
+    float: left;
+    margin: 2px 0 2px 15px;
+    padding: 5px;
+    font-weight: bold;
+  }
+
+  .offer-price-discount {
+    font-size: 12px;
+    float: left;
+    margin: 2px 0 2px 0px;
+    padding: 5px 0;
+    font-weight: bold;    
+  }
+
+  .offer-price-tag {
+    font-size: 12px;
+    float: left;
+    margin: 2px 0 2px 2px;
+    padding: 5px 0;
+    font-weight: bold;    
+  }
+
+  .offer-price-striketrough {
+    position: relative;
+  }
+
+  .offer-price-striketrough:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 50%;
+    right: 0;
+    border-top: 1.5px solid;
+    border-color: #af1a00;
+
+    -webkit-transform:rotate(-45deg);
+    -moz-transform:rotate(-45deg);
+    -ms-transform:rotate(-45deg);
+    -o-transform:rotate(-45deg);
+    transform:rotate(-45deg);
+
+  }
+
+  .over-tag {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    right: -20px;
+    background-color: #D91D2B;
+    top: 35px;
+    color: white;
+    padding: 3px 20px;
+    border-radius: 15px;
+    display: inline-block;
+    font-size: 11px;
+    transition: background-color 400ms;
+      span {
+        padding: 0 0 4px 5px;
+        display: inline-block;
+      }
+  }
+
+  .over-tag.accent-default:hover {
+    background-color: rgba($accent-default, 1);
+  }
+
+  .over-tag.accent-alternative:hover {
+    background-color: rgba($accent-alternative, 1);
+  }
+
+  .small-link.accent-default {
+    float: right;
+    @include small-link($accent-default);
+    padding: 10px;
+  }
+  .small-link.accent-alternative {
+    float: right;
+    @include small-link($accent-alternative);
+    padding: 10px;
+  }
+
+  .img-container {
+    position: relative;
+  }
+
+  .mouseover-cover {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 400ms;
+  }
+
+  .mouseover-cover.accent-default {
+    background-color: rgba($accent-default, 0.5);
+  }
+
+  .mouseover-cover.accent-alternative {
+    background-color: rgba($accent-alternative, 0.5);
+  }
+
+  .mouseover-cover:hover {
+    opacity: 1;
+  }
+
+  .mouseover-cover.accent-default:hover + div {
+    background-color: $accent-default;
+  }
+
+  .mouseover-cover.accent-alternative:hover + div {
+    background-color: $accent-alternative;
+  }
+
+
+  .mouseover-cover-inner-text {
+    border: 2px solid #fff;
+    border-radius: 100px;
+    padding: 35px;
+    display: inline-block;
+    margin: 0 auto;
+    color: #fff;
+    text-align: center;
+    font-weight: bolder;
+
+    p {
+      padding: 0;
+      margin: -5px;
+    }
+  }
+}
+
+.card.card-offer:hover .mouseover-cover{
+  opacity: 1;
+}

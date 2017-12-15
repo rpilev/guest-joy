@@ -1,4 +1,3 @@
-<div [class]="'main-container ' + background_theme">
-  <app-hero [theme]="accent_theme" [content]="hero"></app-hero>
-  <app-offers-list></app-offers-list> 
-</div>
+<app-hero [theme]="accent_theme" [content]="hero"></app-hero>
+<h2 [class]="'medium-heading ' + accent_theme">Our special offers for you</h2>
+<app-offers-list [theme]="accent_theme"></app-offers-list>

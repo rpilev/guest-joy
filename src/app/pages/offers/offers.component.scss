@@ -1,14 +1,10 @@
 @import '~sass/variables';
 @import '~sass/mixins';
 
-.main-container.background-default {
-  height: 100%;
-  width: 100%;
-  background-color: $background_default;
+.medium-heading.accent-default {
+  @include medium-heading($accent-default);
 }
 
-.main-container.background-alternative {
-  height: 100%;
-  width: 100%;
-  background-color: $background_alternative;
+.medium-heading.accent-alternative {
+  @include medium-heading($accent-alternative);
 }

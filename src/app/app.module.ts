@@ -12,6 +12,8 @@ import { OfferDetailsComponent } from './pages/offer-details/offer-details.compo
 import { AppRoutingModule } from './app-routing.module';
 import { OfferDetailsBoxComponent } from './ui-elements/offer-details-box/offer-details-box.component';
 
+import { OffersService } from './offers.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +28,7 @@ import { OfferDetailsBoxComponent } from './ui-elements/offer-details-box/offer-
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [OffersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

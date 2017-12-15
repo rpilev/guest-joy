@@ -1,3 +1,45 @@
-<p>
-  offer works!
-</p>
+<div class="card card-offer">
+  <div class="img-container">
+    <div [class]="'mouseover-cover ' + theme">
+      <div class="mouseover-cover-inner-text">
+        <p>READ</p>
+        <p>MORE</p>
+      </div>
+    </div>
+    <div [class]="'over-tag ' + theme" *ngIf="offer.discount > 0 && !offer.most_pop">
+      <span>
+        -{{ offer.discount * 100 }} %
+      </span>
+    </div>
+    <div [class]="'over-tag ' + theme" *ngIf="offer.most_pop && offer.discount === 0">
+      <i class="fa fa-star" aria-hidden="true"></i>
+      <span>
+        most pop
+      </span>
+    </div>
+    <div [class]="'over-tag ' + theme" *ngIf="offer.most_pop && offer.discount > 0">
+      <i class="fa fa-star" aria-hidden="true"></i>
+      <span>
+        most pop -{{ offer.discount * 100 }} %
+      </span>
+    </div>
+    <img class="card-img-top" [src]="offer.imgPath" [alt]="offer.name">
+  </div>
+  <div class="card-block">
+    <p class="offer-title">{{ offer.name }}</p>
+    <hr>
+    <div *ngIf="offer.getDiscounterPrice() > 0">
+      <span [ngClass]="{'offer-price': true, 'offer-price-striketrough': offer.discount > 0}">
+        {{ offer.price }}
+      </span>
+      <span class="offer-price-discount" *ngIf="offer.discount > 0">
+        {{ offer.getDiscounterPrice() }}
+      </span>
+      <span class="offer-price-tag">EUR</span>   
+    </div>
+    <span class="offer-price" *ngIf="offer.getDiscounterPrice() <= 0">
+      FREE
+    </span>
+    <a href="#" [class]="'small-link ' + theme">READ MORE &gt;</a>
+  </div>
+</div>

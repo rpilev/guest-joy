@@ -1,3 +1,3 @@
-<p>
-  offers-list works!
-</p>
+<div class="container-fluid offers-list">
+  <app-offer [theme]='theme' *ngFor="let offer of offers" [data]="offer"></app-offer>
+</div>

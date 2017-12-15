@@ -8,10 +8,8 @@ import { Hero } from './hero.model';
 })
 export class HeroComponent implements OnInit {
 
-  @Input('content')
-  hero: Hero;
-  @Input()
-  theme: string;
+  @Input('content') hero: Hero;
+  @Input() theme: string;
 
   constructor() { }
 

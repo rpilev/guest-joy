@@ -1,3 +1,45 @@
-<p>
-  offer-details-box works!
-</p>
+<div class="container-fluid offer-details">
+  <div class="row">
+    <div class="col-md-5">
+        <img class="img-fluid" [src]="offer.imgPath">
+    </div>
+    <div class="col-md-7 offer-description">
+      <h2 [class]="'medium-heading ' + theme">{{ offer.name }}</h2>
+      <p class="small-bold-text">{{ offer.views_weekly }} persons viewed this offer last week</p>
+      <p>{{ offer.description }}</p>
+      <hr>
+      <form #order_form="ngForm">
+        <div class="form-group">
+          <label for="quantity-select"><strong>Choode quantity:</strong></label> 
+          <select class=" quantity-select" id="quantity-select">
+            <option value="0"></option>
+            <option *ngFor="let i of quantities" [value]='i'>{{ i }}</option>
+          </select>
+          <div [class]="'offer-price-container ' + theme" *ngIf="offer.getDiscounterPrice() > 0">
+            <span class="offer-price-tag">Price:</span>
+            <span [ngClass]="{'offer-price': true, 'offer-price-striketrough': offer.discount > 0}">
+              {{ offer.price }}
+            </span>
+            <span class="offer-price-discount" *ngIf="offer.discount > 0">
+              {{ offer.getDiscounterPrice() }}
+            </span>
+            <span class="offer-price-tag">EUR</span>   
+          </div>
+          <span class="offer-price" *ngIf="offer.getDiscounterPrice() <= 0">
+            FREE
+          </span>
+        </div>
+        <div class="form-group">
+          <label for="input_remarks"><strong>Remarks:</strong></label>
+          <textarea class='form-control' id='input_remarks'></textarea>
+        </div>
+        <button [class]="'btn button button-fill ' + theme">
+          PLACE AN ORDER
+        </button>
+        <button [class]="'btn button button-transparent ' + theme" [routerLink]="theme_name_for_url === unidentified ? ['/'] : ['/', theme_name_for_url]">
+          BACK
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

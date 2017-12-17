@@ -41,17 +41,4 @@
   h1.accent-alternative{
     @include big-heading($accent_alternative);
   }
-
-  .button.button-fill.accent-default {
-    @include button($accent_default, 'fill');
-  }
-  .button.button-transparent.accent-default {
-    @include button($accent_default, 'transparent');
-  }
-  .button.button-fill.accent-alternative {
-    @include button($accent_alternative, 'fill');
-  }
-  .button.button-transparent.accent-alternative {
-    @include button($accent_alternative, 'transparent');
-  }
 }

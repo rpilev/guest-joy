@@ -1,0 +1,75 @@
+@import '~sass/variables';
+@import '~sass/mixins';
+
+.offer-details {
+  background-color: #EBEBEB;
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 25px;
+
+  hr {
+    margin: 30px 0;
+  }
+
+  .small-bold-text {
+    font-size: 10px;
+    font-weight: 800;
+    padding-top: 5px;
+  }
+
+  .offer-description {
+    .medium-heading {
+      text-align: left;
+      padding-top: 5px;
+      font-size: 28px;
+    }
+  }
+
+  .quantity-select {
+    width: 83px;
+    height: 33px;
+    display: inline;
+    border: none;
+    margin-left: 15px;
+  }
+
+  textarea {
+    height: 100px;
+    border: none;
+    resize: none
+  }
+
+
+  .button-fill {
+    margin-left: 0;
+  }
+
+  .button-transparent {
+    float: right;
+    width: 80px;
+    margin-right: 0;
+  }
+
+  .offer-price-container {
+    .offer-price {
+      &.offer-price-striketrough,
+      &.offer-price{
+        margin-left: 0 !important;
+      }
+    }
+    &.accent-default {
+      float: right;
+      @include offer-price($accent-default);
+    }
+    &.accent-alternative {
+      float: right;
+      @include offer-price($accent-alternative);
+    }
+  }
+
+
+  .offer-price-container.accent-alternative {
+    float: right;
+    @include offer-price($accent-alternative);
+  }
+}

@@ -18,61 +18,13 @@
     margin: 0;
   }
 
-  hr {
-    border-color: white;
-    margin: 1px;
-  }
-
   .card-block {
     bottom: 0;
     position: absolute;
     width: 100%;
   }
 
-  .offer-price {
-    font-size: 12px;
-    float: left;
-    margin: 2px 0 2px 15px;
-    padding: 5px;
-    font-weight: bold;
-  }
-
-  .offer-price-discount {
-    font-size: 12px;
-    float: left;
-    margin: 2px 0 2px 0px;
-    padding: 5px 0;
-    font-weight: bold;    
-  }
-
-  .offer-price-tag {
-    font-size: 12px;
-    float: left;
-    margin: 2px 0 2px 2px;
-    padding: 5px 0;
-    font-weight: bold;    
-  }
-
-  .offer-price-striketrough {
-    position: relative;
-  }
-
-  .offer-price-striketrough:before {
-    position: absolute;
-    content: "";
-    left: 0;
-    top: 50%;
-    right: 0;
-    border-top: 1.5px solid;
-    border-color: #af1a00;
-
-    -webkit-transform:rotate(-45deg);
-    -moz-transform:rotate(-45deg);
-    -ms-transform:rotate(-45deg);
-    -o-transform:rotate(-45deg);
-    transform:rotate(-45deg);
-
-  }
+  @include offer-price(black);
 
   .over-tag {
     position: absolute;

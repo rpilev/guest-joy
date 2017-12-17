@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnChanges } from '@angular/core';
 import { Offer } from './offer/offer.model';
 import { OffersService } from '../../offers.service';
 
@@ -7,15 +7,22 @@ import { OffersService } from '../../offers.service';
   templateUrl: './offers-list.component.html',
   styleUrls: ['./offers-list.component.scss']
 })
-export class OffersListComponent implements OnInit {
+export class OffersListComponent implements OnInit, OnChanges {
 
   offers: Offer[];
   @Input() theme: string;
+  @Input() limit: number;
+  @Input() exclude: number;
 
   constructor(private offersService: OffersService) { }
 
   ngOnInit() {
-    this.offers = this.offersService.getOffers();
+    this.offers = this.offersService.getOffers(this.limit, this.exclude);
+    console.log(this.offers);
+  }
+
+  ngOnChanges() {
+    this.offers = this.offersService.getOffers(this.limit, this.exclude);
     console.log(this.offers);
   }
 

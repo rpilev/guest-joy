@@ -1,5 +1,5 @@
 <div class="card card-offer">
-  <div class="img-container">
+  <div class="img-container" [routerLink]="theme_name_for_url === unidentified ? ['/offer', index] : ['/offer', index, theme_name_for_url]">
     <div [class]="'mouseover-cover ' + theme">
       <div class="mouseover-cover-inner-text">
         <p>READ</p>
@@ -40,6 +40,6 @@
     <span class="offer-price" *ngIf="offer.getDiscounterPrice() <= 0">
       FREE
     </span>
-    <a href="#" [class]="'small-link ' + theme">READ MORE &gt;</a>
+    <a [routerLink]="theme_name_for_url === unidentified ? ['/offer', index] : ['/offer', index, theme_name_for_url]" [class]="'small-link ' + theme">READ MORE &gt;</a>
   </div>
 </div>

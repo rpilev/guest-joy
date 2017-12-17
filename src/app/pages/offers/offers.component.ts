@@ -12,7 +12,6 @@ import { Subscription } from 'rxjs';
 export class OffersComponent implements OnInit, OnDestroy {
 
   accent_theme: string;
-  background_theme: string;
   theme_subscription: Subscription;
 
   hero_title = 'Hello John Smith';
@@ -42,12 +41,10 @@ export class OffersComponent implements OnInit, OnDestroy {
         params => {
           if(params['theme'] == 'alternative') {
             this.accent_theme = 'accent-alternative';
-            this.background_theme = 'background-alternative'
 
             document.body.className = 'background-alternative';
           } else {
             this.accent_theme = 'accent-default';
-            this.background_theme = 'background-default'
 
             document.body.className = 'background-default';
           }

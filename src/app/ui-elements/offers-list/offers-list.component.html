@@ -1,3 +1,9 @@
-<div class="container-fluid offers-list">
-  <app-offer [theme]='theme' *ngFor="let offer of offers" [data]="offer"></app-offer>
+<div [ngClass]="{ 'offers-list-compact': exclude!=null }"  class="container-fluid offers-list">
+  <i *ngIf="exclude" class="fa fa-chevron-left" aria-hidden="true"></i>
+  <ng-container *ngFor="let offer of offers; let i = index">
+    <ng-container *ngIf="offer != null">
+      <app-offer [theme]='theme' [index]='i' [data]="offer"></app-offer>
+    </ng-container>
+  </ng-container>
+  <i *ngIf="exclude" class="fa fa-chevron-right" aria-hidden="true"></i>
 </div>

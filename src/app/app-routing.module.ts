@@ -14,7 +14,11 @@ const appRoutes: Routes = [
     component: OffersComponent
   },
   {
-    path: 'offer-details/:id',
+    path: 'offer/:id',
+    component: OfferDetailsComponent
+  },
+  {
+    path: 'offer/:id/:theme',
     component: OfferDetailsComponent
   }
 ];

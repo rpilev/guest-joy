@@ -1,0 +1,25 @@
+@import '~sass/variables';
+@import '~sass/mixins';
+
+.medium-heading {
+  margin-bottom: 35px;
+}
+.medium-heading:nth-child(1) {
+  margin-bottom: 65px;
+}
+
+.button {
+  &.button-transparent {
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 35px;
+  }
+}
+
+.chat-box.accent-default {
+  @include chat-box($accent-default)
+}
+
+.chat-box.accent-alternative {
+  @include chat-box($accent-alternative)
+}

@@ -11,10 +11,15 @@ export class OfferComponent implements OnInit {
 
   @Input('data') offer: Offer;
   @Input() theme: string;
+  theme_name_for_url: string;
+  @Input() index: number;
 
   constructor() { }
 
   ngOnInit() {
+    if(this.theme === 'accent-alternative') {
+      this.theme_name_for_url = 'alternative';
+    }
   }
 
 }

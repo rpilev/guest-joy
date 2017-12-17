@@ -1,3 +1,10 @@
-<p>Offer id: {{ offer_id }}</p>
-<app-offer-details-box></app-offer-details-box>
-<app-offers-list></app-offers-list>
+<h2 [class]="'medium-heading ' + accent_theme">Our special offers for you</h2>
+<app-offer-details-box [offer]="offer" [theme]="accent_theme"></app-offer-details-box>
+<h2 [class]="'medium-heading ' + accent_theme">Other offers</h2>
+<app-offers-list [exclude]='index' [theme]='accent_theme' limit='4'></app-offers-list>
+<button [routerLink]="theme_name_for_url === unidentified ? ['/'] : ['/', theme_name_for_url]" [class]="'btn button button-transparent ' + accent_theme">
+  BACK
+</button>
+<div [class]="'chat-box ' + accent_theme">
+  <i class="fa fa-commenting" aria-hidden="true"></i> CHAT
+</div>

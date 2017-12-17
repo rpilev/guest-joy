@@ -18,12 +18,10 @@ export class OffersListComponent implements OnInit, OnChanges {
 
   ngOnInit() {
     this.offers = this.offersService.getOffers(this.limit, this.exclude);
-    console.log(this.offers);
   }
 
   ngOnChanges() {
     this.offers = this.offersService.getOffers(this.limit, this.exclude);
-    console.log(this.offers);
   }
 
 }

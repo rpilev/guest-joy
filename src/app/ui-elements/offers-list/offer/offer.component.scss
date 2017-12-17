@@ -45,23 +45,27 @@
       }
   }
 
-  .over-tag.accent-default:hover {
-    background-color: rgba($accent-default, 1);
+  .over-tag {
+    &.accent-default:hover {
+      background-color: rgba($accent-default, 1);
+    }
+
+    &.accent-alternative:hover {
+      background-color: rgba($accent-alternative, 1);
+    }
   }
 
-  .over-tag.accent-alternative:hover {
-    background-color: rgba($accent-alternative, 1);
-  }
-
-  .small-link.accent-default {
-    float: right;
-    @include small-link($accent-default);
-    padding: 10px;
-  }
-  .small-link.accent-alternative {
-    float: right;
-    @include small-link($accent-alternative);
-    padding: 10px;
+  .small-link {
+    &.accent-default {
+      float: right;
+      @include small-link($accent-default);
+      padding: 10px;      
+    }
+    &.accent-alternative {
+      float: right;
+      @include small-link($accent-alternative);
+      padding: 10px;
+    }
   }
 
   .img-container {
@@ -79,24 +83,22 @@
     transition: opacity 400ms;
   }
 
-  .mouseover-cover.accent-default {
-    background-color: rgba($accent-default, 0.5);
-  }
-
-  .mouseover-cover.accent-alternative {
-    background-color: rgba($accent-alternative, 0.5);
-  }
-
-  .mouseover-cover:hover {
-    opacity: 1;
-  }
-
-  .mouseover-cover.accent-default:hover + div {
-    background-color: $accent-default;
-  }
-
-  .mouseover-cover.accent-alternative:hover + div {
-    background-color: $accent-alternative;
+  .mouseover-cover {
+    &.accent-default{
+      background-color: rgba($accent-default, 0.5);
+    }
+    &.accent-alternative {
+      background-color: rgba($accent-alternative, 0.5);
+    }
+    &:hover {
+      opacity: 1;
+    }
+    &.accent-default:hover + div {
+      background-color: $accent-default;
+    }
+    &.accent-alternative:hover + div {
+      background-color: $accent-alternative;
+    }
   }
 
 

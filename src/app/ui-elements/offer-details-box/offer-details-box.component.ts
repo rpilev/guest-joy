@@ -39,6 +39,9 @@ export class OfferDetailsBoxComponent implements OnInit, OnChanges {
   }
 
   onSubmit(form) {
+    this.form_error = '';
+    this.form_success = '';
+
     form.controls['input-remarks'].touched = true;
     form.controls['quantity-select'].touched = true;
 
@@ -47,7 +50,6 @@ export class OfferDetailsBoxComponent implements OnInit, OnChanges {
       this.form_error = 'Please fill in all of the fields';
       return;
     }
-    this.form_error = '';
     console.log('Quantity selected: ' + form.value['quantity-select']);
     console.log('User remarks: ' + form.value['input-remarks']);
     this.form_success = 'Thank you! Your order has been placed.';

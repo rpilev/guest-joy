@@ -3,9 +3,9 @@
 
 .medium-heading {
   margin-bottom: 35px;
-}
-.medium-heading:nth-child(1) {
-  margin-bottom: 65px;
+  &medium-heading:nth-child(1) {
+    margin-bottom: 65px;
+  }
 }
 
 .button {

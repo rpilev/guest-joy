@@ -28,17 +28,21 @@
     margin: 30px 0;
     display: block;
   }
-  a.small-link.accent-default {
-    @include small-link($accent_default);
-  }
-  a.small-link.accent-alternative {
-    @include small-link($accent-alternative);
+  a.small-link {
+    &.accent-default{
+      @include small-link($accent_default);
+    }
+    &.accent-alternative {
+      @include small-link($accent-alternative);
+    }
   } 
 
-  h1.accent-default{
-    @include big-heading($accent_default);
-  }
-  h1.accent-alternative{
-    @include big-heading($accent_alternative);
+  h1 {
+    &.accent-default{
+      @include big-heading($accent_default);
+    }
+    &.accent-alternative{
+      @include big-heading($accent_alternative);
+    }
   }
 }

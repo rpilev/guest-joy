@@ -4,16 +4,32 @@
         <img class="img-fluid" [src]="offer.imgPath">
     </div>
     <div class="col-md-7 offer-description">
-      <h2 [class]="'medium-heading ' + theme">{{ offer.name }}</h2>
-      <p class="small-bold-text">{{ offer.views_weekly }} persons viewed this offer last week</p>
+      <h2 [class]="'medium-heading ' + theme">
+        {{ offer.name }}
+      </h2>
+      <p class="small-bold-text">
+        {{ offer.views_weekly }} persons viewed this offer last week
+      </p>
       <p>{{ offer.description }}</p>
       <hr>
-      <form (ngSubmit)="onSubmit(order_form)" #order_form_1 #order_form="ngForm">
+      <form 
+        (ngSubmit)="onSubmit(order_form)"
+        #order_form_1
+        #order_form="ngForm"
+        >
         <div class="form-group">
           <label for="quantity-select"><strong>Choode quantity:</strong></label> 
-          <select ngModel required name="quantity-select" class=" quantity-select" id="quantity-select">
+          <select
+            ngModel
+            required
+            name="quantity-select"
+            class=" quantity-select"
+            id="quantity-select"
+            >
             <option value="0" disabled></option>
-            <option *ngFor="let i of quantities" [value]='i'>{{ i }}</option>
+            <option *ngFor="let i of quantities" [value]='i'>
+              {{ i }}
+            </option>
           </select>
           <div [class]="'offer-price-container ' + theme" *ngIf="offer.getDiscounterPrice() > 0">
             <span class="offer-price-tag">Price:</span>
@@ -31,7 +47,13 @@
         </div>
         <div class="form-group">
           <label for="input-remarks"><strong>Remarks:</strong></label>
-          <textarea ngModel required name="input-remarks" class='form-control' id='input-remarks'></textarea>
+          <textarea
+            ngModel
+            required
+            name="input-remarks"
+            class='form-control'
+            id='input-remarks'
+            ></textarea>
         </div>
         <button [class]="'btn button button-fill ' + theme">
           PLACE AN ORDER

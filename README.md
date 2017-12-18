@@ -44,9 +44,6 @@ If no other development servers are currently running on the local machine then 
 * [Bootstrap](https://github.com/twbs/bootstrap)
 * [Font-Awesome](https://github.com/FortAwesome/Font-Awesome)
 
-## Authors
-* Raul Špilev
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/rpilev/guest-joy/blob/master/LICENSE) file for details

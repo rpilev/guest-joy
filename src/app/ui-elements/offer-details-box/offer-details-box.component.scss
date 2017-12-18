@@ -5,6 +5,11 @@
 
   @include over-tag()
 
+  .img-fluid {
+    margin: 0 auto;
+    display: block;
+  }
+
   .top-heading-mobile {
     display: none;
     padding: 0;
@@ -115,7 +120,8 @@
         display: inline-block;
       }
       .offer-price,
-      .offer-price-tag {
+      .offer-price-tag,
+      .offer-price-discount {
         font-size: 16px;
         margin-top: 17px
       }

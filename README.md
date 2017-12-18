@@ -5,6 +5,11 @@
 # Guest Joy
 Front-end design for an ecommerce shop built in Angular 4.
 
+
+## Features
+
+* The theme color can be changed by adding '/alternative' to the end of the url
+
 ## Getting Started
 
 ### Prerequisites

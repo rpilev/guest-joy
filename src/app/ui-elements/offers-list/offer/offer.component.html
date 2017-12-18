@@ -1,4 +1,4 @@
-<div class="card card-offer">
+<div [ngClass]="{'card': true, 'card-offer': true, 'compact-offer': compact_offer }">
   <div class="img-container" [routerLink]="theme_name_for_url === unidentified ? ['/offer', index] : ['/offer', index, theme_name_for_url]">
     <div [class]="'mouseover-cover ' + theme">
       <div class="mouseover-cover-inner-text">

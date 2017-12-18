@@ -67,7 +67,7 @@ export class OffersService {
       './assets/images/offer_images/offer_7.jpeg',
       0),
     new Offer(
-     'Amet est veniam duis ut ut duis nisi laborum aliquip',
+     'Amet est veniam duis ut ut duis nisi',
       0,
       false,
       13,

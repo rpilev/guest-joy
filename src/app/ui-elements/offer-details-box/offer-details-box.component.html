@@ -1,7 +1,25 @@
 <div class="container-fluid offer-details">
+  <h2 [class]="'medium-heading top-heading-mobile ' + theme">Our special offers for you</h2>
   <div class="row">
     <div class="col-md-5">
-        <img class="img-fluid" [src]="offer.imgPath">
+      <div [class]="'over-tag ' + theme" *ngIf="offer.discount > 0 && !offer.most_pop">
+        <span>
+          -{{ offer.discount * 100 }} %
+        </span>
+      </div>
+      <div [class]="'over-tag ' + theme" *ngIf="offer.most_pop && offer.discount === 0">
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <span>
+          most pop
+        </span>
+      </div>
+      <div [class]="'over-tag ' + theme" *ngIf="offer.most_pop && offer.discount > 0">
+        <i class="fa fa-star" aria-hidden="true"></i>
+        <span>
+          most pop -{{ offer.discount * 100 }} %
+        </span>
+      </div>
+      <img class="img-fluid" [src]="offer.imgPath">
     </div>
     <div class="col-md-7 offer-description">
       <h2 [class]="'medium-heading ' + theme">
@@ -18,7 +36,7 @@
         #order_form="ngForm"
         >
         <div class="form-group">
-          <label for="quantity-select"><strong>Choode quantity:</strong></label> 
+          <label id="quantity-select-label" for="quantity-select"><strong>Choode quantity:</strong></label> 
           <select
             ngModel
             required
@@ -31,19 +49,26 @@
               {{ i }}
             </option>
           </select>
+          <br class="price-break-point">
           <div [class]="'offer-price-container ' + theme" *ngIf="offer.getDiscounterPrice() > 0">
-            <span class="offer-price-tag">Price:</span>
-            <span [ngClass]="{'offer-price': true, 'offer-price-striketrough': offer.discount > 0}">
-              {{ offer.price }}
-            </span>
-            <span class="offer-price-discount" *ngIf="offer.discount > 0">
-              {{ offer.getDiscounterPrice() }}
-            </span>
-            <span class="offer-price-tag">EUR</span>   
+            <div class="price-inner-container">
+              <span class="offer-price-tag">Price:</span>
+              <span [ngClass]="{'offer-price': true, 'offer-price-striketrough': offer.discount > 0}">
+                {{ offer.price }}
+              </span>
+              <span class="offer-price-discount" *ngIf="offer.discount > 0">
+                {{ offer.getDiscounterPrice() }}
+              </span>
+              <span class="offer-price-tag">EUR</span>             
+            </div> 
           </div>
-          <span class="offer-price" *ngIf="offer.getDiscounterPrice() <= 0">
-            FREE
-          </span>
+          <div *ngIf="offer.getDiscounterPrice() <= 0" [class]="'offer-price-container ' + theme">
+            <div class="price-inner-container">
+              <span class="offer-price">
+                FREE
+              </span>
+            </div>
+          </div>
         </div>
         <div class="form-group">
           <label for="input-remarks"><strong>Remarks:</strong></label>

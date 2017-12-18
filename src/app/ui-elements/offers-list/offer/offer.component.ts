@@ -13,6 +13,7 @@ export class OfferComponent implements OnInit {
   @Input() theme: string;
   theme_name_for_url: string;
   @Input() index: number;
+  @Input() compact_offer: boolean;
 
   constructor() { }
 

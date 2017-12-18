@@ -2,7 +2,11 @@
   <i *ngIf="exclude" class="fa fa-chevron-left" aria-hidden="true"></i>
   <ng-container *ngFor="let offer of offers; let i = index">
     <ng-container *ngIf="offer != null">
-      <app-offer [theme]='theme' [index]='i' [data]="offer"></app-offer>
+      <app-offer 
+        [compact_offer]="exclude!=null" 
+        [theme]='theme'
+        [index]='i'
+        [data]="offer"></app-offer>
     </ng-container>
   </ng-container>
   <i *ngIf="exclude" class="fa fa-chevron-right" aria-hidden="true"></i>

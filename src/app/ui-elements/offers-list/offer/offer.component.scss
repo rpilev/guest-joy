@@ -2,6 +2,10 @@
 @import '~sass/mixins';
 
 .card.card-offer {
+
+  @include offer-price(black);
+  @include over-tag();
+
   vertical-align: top;
   height: 300px;
   display: inline-block !important;
@@ -22,37 +26,6 @@
     bottom: 0;
     position: absolute;
     width: 100%;
-  }
-
-  @include offer-price(black);
-
-  .over-tag {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    right: -20px;
-    background-color: #D91D2B;
-    top: 35px;
-    color: white;
-    padding: 3px 20px;
-    border-radius: 15px;
-    display: inline-block;
-    font-size: 11px;
-    transition: background-color 400ms;
-      span {
-        padding: 0 0 4px 5px;
-        display: inline-block;
-      }
-  }
-
-  .over-tag {
-    &.accent-default:hover {
-      background-color: rgba($accent-default, 1);
-    }
-
-    &.accent-alternative:hover {
-      background-color: rgba($accent-alternative, 1);
-    }
   }
 
   .small-link {
@@ -115,6 +88,50 @@
     p {
       padding: 0;
       margin: -5px;
+    }
+  }
+}
+
+@media(max-width: 546px) {
+  .container-fluid.offers-list {
+    padding: 0;
+  }
+  .over-tag {
+    font-size: 7px !important;
+    height: 19px !important;
+    padding: 4px 10px !important;
+    right: -7px !important;
+    top: 12px !important;
+  }
+  .card.card-offer {
+    background-color: transparent;
+    .offer-title {
+      color: #969696;
+      font-size: 12px;
+      padding: 0;
+    }
+    margin: 3px;
+    width: 8rem;
+    height: 200px;
+    .small-link {
+      display: none;
+    }
+    .offer-price {
+      margin-left: 0;
+    }
+  }
+  .card.card-offer.compact-offer {
+    width: 15rem;
+    height: 355px;
+    .offer-title {
+      color: black;
+      margin-bottom: 9px;
+    }
+    .offer-price {
+      padding-left: 0;
+    }
+    .small-link {
+      display: inline-block;;
     }
   }
 }

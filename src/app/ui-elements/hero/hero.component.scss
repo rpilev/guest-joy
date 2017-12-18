@@ -45,4 +45,32 @@
       @include big-heading($accent_alternative);
     }
   }
+
+  @media(max-width: 546px) {
+    .narrow-center-text {
+      font-size: 13px;    
+    }
+    h1 {
+      font-size: 23px !important;
+    }
+    .btn.button {
+      width: 206px;
+      padding: 1px;
+      font-size: 12px;
+      i {
+        font-size: 40px;
+      }
+      span {
+        margin-left: 4px;
+        line-height: 45px;
+        vertical-align: top;
+      }
+    }
+  }
+}
+
+@media(max-width: 546px) {
+  .container-fluid.main-hero {
+    padding: 0;    
+  }
 }

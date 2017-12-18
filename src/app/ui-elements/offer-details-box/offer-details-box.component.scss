@@ -2,6 +2,21 @@
 @import '~sass/mixins';
 
 .offer-details {
+
+  @include over-tag()
+
+  .top-heading-mobile {
+    display: none;
+    padding: 0;
+    font-size: 21px;
+    margin-bottom: 44px;
+    margin-top: 11px;
+  }
+
+  .over-tag {
+    right: 0px;
+  }
+
   background-color: #EBEBEB;
   max-width: 920px;
   margin: 0 auto;
@@ -14,6 +29,10 @@
 
   hr {
     margin: 30px 0;
+  }
+
+  .price-break-point {
+    display: none;
   }
 
   .small-bold-text {
@@ -76,5 +95,53 @@
   .offer-price-container.accent-alternative {
     float: right;
     @include offer-price($accent-alternative);
+  }
+
+  @media(max-width: 546px) {
+    .price-break-point {
+      display: block;
+    }
+    #quantity-select {
+      float: right;
+    }
+    .offer-price-container.accent-default {
+      width: 100%;
+      text-align: right;
+      display: inline-block;
+      span {
+        display: block;
+      }
+      .price-inner-container {
+        display: inline-block;
+      }
+      .offer-price,
+      .offer-price-tag {
+        font-size: 16px;
+        margin-top: 17px
+      }
+    }
+
+    .top-heading-mobile {
+      display: block;
+    }
+    .medium-heading {
+      padding-top: 17px !important;
+      font-size: 18px !important;
+    }
+    .small-bold-text {
+      margin-bottom: 28px;
+    }
+    textarea {
+      margin-bottom: 40px;
+      height: 187px;
+    }
+    .btn.button {
+      display: block;
+      margin: 10px auto;
+      float: none;
+      width: 204px;
+      height: 42px;
+      font-size: 13px;
+    }
   }
 }

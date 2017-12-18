@@ -8,7 +8,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  
+
   .fa-chevron-left {
     color: #EBEBEB;
     font-size: 33px;
@@ -36,6 +36,17 @@
   @media(max-width: 609px) {
     app-offer:nth-child(2) {
       display: none;
+    }
+  }
+
+  @media(max-width: 546px) {
+    .fa.fa-chevron-left {
+      padding-right: 0px;
+      margin-bottom: 90px;
+    }
+    .fa.fa-chevron-right {
+      padding-left: 0px;
+      margin-bottom: 90px;
     }
   }
 }

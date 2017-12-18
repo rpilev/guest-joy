@@ -8,6 +8,10 @@
   }
 }
 
+.arrow-totop {
+  display: none;
+}
+
 .button {
   &.button-transparent {
     margin: 0 auto;
@@ -22,4 +26,37 @@
 
 .chat-box.accent-alternative {
   @include chat-box($accent-alternative)
+}
+
+@media(max-width: 546px) {
+  .top-heading {
+    display: none;
+  }
+  .heading-bottom {
+    font-size: 20px;
+  }
+  .bottom-button {
+    display: none !important;
+  }
+  .chat-box {
+    display: none !important;
+  }
+  .arrow-totop {
+
+    &.accent-default {
+      color: $accent-default;
+    }
+    &.accent-alternative {
+      color: $accent-alternative;
+    }
+    font-size: 138px;
+    text-align: right;
+    overflow: hidden;
+    height: 140px;
+    margin-top: -76px;
+    display: block;
+    span {
+      right: 0;
+    }
+  }
 }

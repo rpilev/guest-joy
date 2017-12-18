@@ -115,3 +115,34 @@
   bottom: 0;
   right: 96px;
 }
+
+@mixin over-tag() {
+  .over-tag {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    right: -20px;
+    background-color: #D91D2B;
+    top: 35px;
+    color: white;
+    padding: 3px 20px;
+    border-radius: 15px;
+    display: inline-block;
+    font-size: 11px;
+    transition: background-color 400ms;
+      span {
+        padding: 0 0 4px 5px;
+        display: inline-block;
+      }
+  }
+
+  .over-tag {
+    &.accent-default:hover {
+      background-color: rgba($accent-default, 1);
+    }
+
+    &.accent-alternative:hover {
+      background-color: rgba($accent-alternative, 1);
+    }
+  }
+}

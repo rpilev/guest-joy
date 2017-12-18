@@ -16,6 +16,8 @@ export class OfferDetailsBoxComponent implements OnInit, OnChanges {
   @Input('theme') theme;
   quantities: number[] = [];
 
+  theme_name_for_url = '';
+
   form_error = '';
   form_success = '';
 
@@ -25,6 +27,10 @@ export class OfferDetailsBoxComponent implements OnInit, OnChanges {
     this.quantities = [];
     for(let i=1;i<this.offer.quantity_available-1;i++) {
       this.quantities.push(i);
+    }
+
+    if(this.theme === 'accent-alternative') {
+      this.theme_name_for_url = 'alternative';
     }
   }
 

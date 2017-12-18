@@ -1,27 +1,57 @@
-# GuestJoy
+<p align="center">
+  <img width="250" src="https://material.angularjs.org/latest/img/icons/angular-logo.svg">
+</p>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.0.
+# Guest Joy
+Front-end design for an ecommerce shop built in Angular 4.
 
-## Development server
+## Getting Started
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Prerequisites
 
-## Code scaffolding
+Requirements to install and test this application:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+    npm package-manager
 
-## Build
+### Installing
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+In your terminal clone the repository using
 
-## Running unit tests
+_HTTPS:_
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+    git clone https://github.com/rpilev/guest-joy.git
+or
 
-## Running end-to-end tests
+_SSH:_
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+    git clone git@github.com:rpilev/guest-joy.git
 
-## Further help
+Install the dependencies
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+    npm install
+
+Run the dev server
+
+    ng serve
+
+If no other development servers are currently running on the local machine then the application should now be available for testing at:
+
+[http://localhost:4200](http://localhost:4200)
+
+## Built With
+
+* [Angular 4](https://github.com/angular) (Bootstrapped with [Angular CLI](https://github.com/angular/angular-cli))
+* [Bootstrap](https://github.com/twbs/bootstrap)
+* [Font-Awesome](https://github.com/FortAwesome/Font-Awesome)
+
+## Authors
+* Raul Špilev
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/rpilev/guest-joy/blob/master/LICENSE) file for details
+
+## External links
+
+Deployed preview available at:
+[http://guest-joy.surge.sh](http://guest-joy.surge.sh/)
